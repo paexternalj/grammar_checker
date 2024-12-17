@@ -5,80 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grammar Checker</title>
     <style>
+        /* Advanced CSS Styling */
         body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            background-color: #f4f4f9;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
             color: #333;
         }
         .container {
-            max-width: 600px;
-            margin: 0 auto;
-            padding: 20px;
             background: #fff;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            border-radius: 8px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            padding: 30px;
+            width: 90%;
+            max-width: 500px;
+            text-align: center;
         }
         h1 {
-            text-align: center;
-            color: #555;
-        }
-        p.description {
-            text-align: center;
-            color: #777;
             margin-bottom: 20px;
+            font-size: 2rem;
+            color: #444;
         }
         textarea {
             width: 100%;
             height: 150px;
-            margin-bottom: 20px;
             padding: 10px;
+            font-size: 1rem;
             border: 1px solid #ddd;
-            border-radius: 5px;
-            font-size: 16px;
+            border-radius: 8px;
+            outline: none;
+            resize: none;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        textarea:focus {
+            border-color: #5b9bd5;
+            box-shadow: 0 0 5px rgba(91, 155, 213, 0.5);
         }
         button {
-            display: block;
-            width: 100%;
-            padding: 10px;
-            font-size: 16px;
-            background: #007BFF;
+            margin-top: 20px;
+            background-color: #5b9bd5;
             color: white;
             border: none;
-            border-radius: 5px;
+            padding: 10px 20px;
+            font-size: 1rem;
             cursor: pointer;
+            border-radius: 8px;
+            transition: background-color 0.3s;
         }
         button:hover {
-            background: #0056b3;
-        }
-        #message {
-            margin-top: 20px;
-            padding: 10px;
-            border-radius: 5px;
-            background-color: #f8d7da;
-            color: #721c24;
-            display: none;
+            background-color: #4a8bc9;
         }
     </style>
+    <script>
+        function redirectToPage() {
+            window.location.href = 'https://paexternalj.github.io/grammmar_checker/';
+        }
+    </script>
 </head>
 <body>
     <div class="container">
         <h1>Grammar Checker</h1>
-        <p class="description">This Grammar Syntax Checker helps you identify grammatical errors and improve the quality of your writing. Simply input your text, click the button, and check for issues!</p>
-        <textarea id="textInput" placeholder="Enter your text here..."></textarea>
-        <button id="checkGrammar" onclick="displayMessage()">Check Grammar Issues</button>
-        <div id="message">Your personal information has been compromised.</div>
+        <p>Paste your text below to check for grammar issues:</p>
+        <textarea placeholder="Type or paste your text here..."></textarea>
+        <br>
+        <button onclick="redirectToPage()">Check Grammar Issues</button>
     </div>
-
-    <script>
-        function displayMessage() {
-            const textInput = document.getElementById('textInput').value;
-            if (textInput.trim() !== "") {
-                document.getElementById('message').style.display = 'block';
-            } else {
-                alert('Please enter some text before checking for grammar issues.');
-            }
-        }
-    </script>
 </body>
 </html>
